@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>All Products - RedStore</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="links">
+                    <ul id="ul-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </div>
+                <div class="cart">
+                    <a href="cart.html"><img src="img/cart.png"></a>
+                </div>
+                <div class="menu-icon" onclick="ShowHide()">
+                    <i class="fas fa-bars" style="font-size:20px;"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Start Account Page -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <span id="log" onclick="MoveLog()">Login</span>
+                        <span id="reg" onclick="MoveReg()">Registre</span>
+                        <div id="move-bar"></div>
+
+                        <form id="LogForm">
+                            <h3>Login</h3>
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="••••••••">
+                            <button type="submit" class="btn">Login</button>
+                            <br>
+                        </form>
+    
+                        <form id="RegForm">
+                            <h3>Register</h3>
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="••••••••">
+                            <br>
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Passowrd?</a>
+                        </form>
+    
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Account Page -->
+
+    <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App For Android And ios Mobile</p>
+                        <div class="app-logo">
+                            <img src="img/play-store.png" alt="">
+                            <img src="img/app-store.png" alt="">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="img/logo-white.png" alt="">
+                        <p>                            
+                            Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases.
+                        </p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <div class="links">
+                            <ul>
+                                <li><a href="">Coupons</a></li>
+                                <li><a href="">Blog Post</a></li>
+                                <li><a href="">Return Policy</a></li>
+                                <li><a href="">Join Affilate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <div class="links">
+                            <ul>
+                                <li><a href="">Facebook</a></li>
+                                <li><a href="">Twitter</a></li>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Youtube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p style="color:#fff;text-align: center;margin-top: 10px;transition: background 0.3s ;">Copyright 2021 - Created By Aymen Zitouni</p>
+        </footer>
+    <!-- End Footer -->
+
+    <script>
+        var Menu = document.getElementById("ul-list");
+        Menu.style.maxHeight="0px";
+
+         function ShowHide(){
+            if(Menu.style.maxHeight=="0px"){
+                Menu.style.maxHeight ="250px";
+            }
+            else{
+                Menu.style.maxHeight ="0px";
+            }
+         }
+         var btnreg = document.getElementById("reg");
+          var regform = document.getElementById("RegForm");
+          var logform = document.getElementById("LogForm");
+          var bar = document.getElementById("move-bar");
+         function MoveLog(){
+          
+          logform.style.transform = "translateX(0px)";
+          regform.style.transform = "translateX(290px)";
+          bar.style.transform = "translateX(56px)"
+          
+         }
+         function MoveReg(){
+            logform.style.transform = "translateX(-290px)";
+            regform.style.transform = "translateX(0px)";
+            bar.style.transform = "translateX(180px)"
+         }
+
+
+    </script>
+</body>
+</html>
